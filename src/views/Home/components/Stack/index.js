@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Item from './components/Item'
 import styles from './styles.module.css'
 
-const Slider = props => {
+const Stack = props => {
 
   const [state, setState] = useState([])
 
@@ -22,8 +22,8 @@ const Slider = props => {
 
   return (
     <div>
-      Slider
-      <div className={styles.slider}>
+      Stack
+      <div className={styles.stack}>
         {state.map((story, i) => 
           <Item key={i} {...story}/>)}
       </div>
@@ -33,4 +33,4 @@ const Slider = props => {
   )
 }
 
-export default Slider
+export default Stack

@@ -1,0 +1,25 @@
+.NavBar {
+  width: 50%;
+  height: 100%;
+  background: yellow;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 20px);
+  grid-row-gap: 1rem;
+  transition: all 1s ease;
+  z-index: 9;
+}
+
+.NavBar a {
+  display: block;
+  text-decoration:  none;
+  width: 60px;
+  text-align: center;
+}
+
+.toogleBtn {
+  position: absolute;
+  left: 50%;
+  transition: all 1s ease;
+}
