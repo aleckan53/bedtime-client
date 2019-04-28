@@ -1,0 +1,12 @@
+.item{
+  background: red;
+  width: 150px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.item:nth-child(n+2){
+  background: green;
+  visibility: hidden;
+}

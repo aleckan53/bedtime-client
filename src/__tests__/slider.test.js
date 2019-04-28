@@ -1,0 +1,12 @@
+import Slider from 'views/Home/components/Slider'
+import { renderHook, act } from 'react-hooks-testing-library'
+
+describe('<Slider/>', () => {
+
+  it('should render items given array of items as props', () => {
+
+    const { result } = renderHook(() => Slider({data: []}))
+
+    console.log(result.current)
+  })
+})
