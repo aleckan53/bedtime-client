@@ -11,7 +11,7 @@ const Item = props => {
       style={bgCover}
       className={styles.item}>
       <h2>{props.name}</h2>
-      <Link to={`/home/story/${props.id}`}>Read</Link>
+      <Link to={`/story/${props.id}`}>Read</Link>
     </div>
   )
 }

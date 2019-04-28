@@ -7,10 +7,6 @@ const Home = props => {
   return (
     <section>
       <Switch>
-        <Route
-          path={`/home/story/:id`}
-          render={(routerProps) => <Story data={props.stories} {...routerProps}/>}
-        />
         <Route 
           exact
           path={`${props.match.path}/`}
