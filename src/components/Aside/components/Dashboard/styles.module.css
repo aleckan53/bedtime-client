@@ -1,0 +1,22 @@
+.image {
+  width: 130px;
+  height: 130px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  margin: 0 auto 1rem;
+}
+
+.info {
+  line-height: 1.4;
+}
+
+.info p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.info h2 {
+  margin: 0;
+}
+

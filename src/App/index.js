@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Api from './api'
-import { Home, Editor } from 'views'
+import { Home, Editor, Story } from 'views'
 import { Switch } from 'react-router-dom'
-import { Route, NavBar } from 'components/index'
-import Story from 'views/Home/components/Story'
+import { Route, Aside } from 'components/index'
 
 
 const App = props => {
@@ -13,10 +12,10 @@ const App = props => {
     Api.getStoriesList()
       .then(setState)
   }, [])
-
+  
   return (
     <div className='App'>
-      <NavBar/>
+      <Aside/>
       <main>
         <Switch>
           <Route path='/editor' component={Editor}/>

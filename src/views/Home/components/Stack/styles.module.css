@@ -1,4 +1,15 @@
-.stack {
-  background: gray;
-  height: 250px;
+.Stack {
+  position: relative;
+  height: 350px;
 }
+
+.title {
+  margin: 0 0 1rem;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between
+}
+

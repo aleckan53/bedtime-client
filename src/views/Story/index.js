@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Api from './api'
-
+import styles from './styles.module.css'
 const Story = props => {
 
   const [story, setStory] = useState({})
@@ -8,18 +8,16 @@ const Story = props => {
   useEffect(() => {
     Api.getStoryById(props.match.params.id)
       .then(setStory)
-
     return () => {
       setStory({})
     }
   }, [props.match.params.id])
-  
+
   return (
-    <div>
+    <div className={styles.Story}>
       <h1>{story.name}</h1>
       <h3>Written by: {story.author}</h3>
-      <div>
-        {story.content}
+      <div dangerouslySetInnerHTML={{__html: story.content}}>
       </div>
     </div>
   )

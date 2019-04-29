@@ -1,0 +1,13 @@
+.Story img {
+  width: 100%;
+}
+
+.Story {
+  text-align: center;
+  line-height: 2;
+  padding: 10%
+}
+
+.Story p {
+  font-size: 1.2rem;
+}

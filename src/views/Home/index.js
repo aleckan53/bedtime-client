@@ -1,18 +1,12 @@
 import React from 'react'
-import Story from './components/Story'
+import styles from './styles.module.css'
 import Stack from './components/Stack'
-import { Switch, Route } from 'react-router-dom'
 
 const Home = props => {
+
   return (
-    <section>
-      <Switch>
-        <Route 
-          exact
-          path={`${props.match.path}/`}
-          render={() => <Stack data={props.stories}/>}
-        />
-      </Switch>
+    <section className={styles.Home}>
+      <Stack data={props.stories} title='Trending'/>
     </section>
   )
 }

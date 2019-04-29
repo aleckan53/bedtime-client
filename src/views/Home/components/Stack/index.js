@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Item from './components/Item'
 import styles from './styles.module.css'
+import Item from './components/Item'
 
 const Stack = props => {
 
@@ -10,26 +10,28 @@ const Stack = props => {
     setState(props.data)
   }, [props.data])
 
-  const nextItem = () => {
-    const firstItem = state.shift()
-    setState([...state, firstItem])
+  const stories = state.map((story, idx) => {
+    return <Item key={idx} {...story}/>
+  })
+
+  const handleNext = () => {
+    setState([...state.slice(1), state[0]])
   }
 
-  const prevItem = () => {
-    const lastItem = state.pop()
-    setState([lastItem, ...state])
+  const handlePrev = () => {
   }
 
   return (
-    <div>
-      Stack
-      <div className={styles.stack}>
-        {state.map((story, i) => 
-          <Item key={i} {...story}/>)}
+    <>
+      <h1 className={styles.title}>{props.title}</h1>
+      <div className={styles.Stack}>
+        {stories}
       </div>
-      <button onClick={prevItem}>Prev</button>
-      <button onClick={nextItem}>Next</button>
-    </div>
+      <div className={styles.controls}>
+        <button onClick={handlePrev}>Prev</button>
+        <button onClick={handleNext}>Next</button>
+      </div>
+    </>
   )
 }
 
