@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
+import './styles.css'
 
 const Editor = props => {
 
@@ -11,12 +12,12 @@ const Editor = props => {
   } 
 
   return (
-    <>
+    <section>
       <ReactQuill 
         theme='snow'
-        value={state} 
+        value={state}
         onChange={handleChange}/>
-    </>
+    </section>
   )
 }
 

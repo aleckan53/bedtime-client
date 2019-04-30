@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 import Item from './components/Item'
-import { FaSearch as Icon } from "react-icons/fa"
+import { 
+  FaSearch as Icon,
+  FaArrowLeft as Left,
+  FaArrowRight as Right, 
+} from "react-icons/fa"
 
 const Stack = props => {
 
@@ -32,8 +36,9 @@ const Stack = props => {
         {stories}
       </div>
       <div className={styles.controls}>
-        <button onClick={handlePrev}>Prev</button>
-        <button onClick={handleNext}>Next</button>
+        <button onClick={handlePrev}><Left/></button>
+        <span>........</span>
+        <button onClick={handleNext}><Right/></button>
       </div>
     </div>
   )

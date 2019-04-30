@@ -8,18 +8,21 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 5px 8px 10px -5px black;
 }
 
 .Item:nth-child(n+2) {
   z-index: 3;
   left: 15%;
   transform: scale(.9,.9);
+  filter: blur(.7px);
 }
 
 .Item:nth-child(n+3) {
   z-index: 2;
   left: 30%;
   transform: scale(.8,.8);
+  filter: blur(1px);
 }
 
 .Item a {
