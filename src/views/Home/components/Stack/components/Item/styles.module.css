@@ -9,20 +9,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 5px 8px 10px -5px black;
+  transform: scale(1,1);
 }
 
 .Item:nth-child(n+2) {
   z-index: 3;
   left: 15%;
   transform: scale(.9,.9);
-  filter: blur(.7px);
 }
 
 .Item:nth-child(n+3) {
   z-index: 2;
   left: 30%;
   transform: scale(.8,.8);
-  filter: blur(1px);
+}
+
+.Item:nth-child(n+4) {
+  z-index: 1;
+  transform: scale(.8,.8);
 }
 
 .Item a {
@@ -38,6 +42,7 @@
   left: 5%;
   line-height: 1.5;
   font-weight: 600;
+  transition: all .5s ease;
 
 }
 
@@ -46,4 +51,7 @@
   bottom: 15%;
   left: 5%;
   color: white;
+  transition: all .5s ease;
 }
+
+

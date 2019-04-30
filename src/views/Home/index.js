@@ -6,8 +6,8 @@ const Home = props => {
 
   return (
     <section className={styles.Home}>
-      <Stack data={props.stories} title='Top Rated'/>
-      <Stack data={props.stories} title='Everything'/>
+      <Stack data={props.stories} title='Top Rated' stackId={1}/>
+      <Stack data={props.stories} title='Everything' stackId={2}/>
     </section>
   )
 }

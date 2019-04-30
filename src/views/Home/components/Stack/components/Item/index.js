@@ -9,9 +9,11 @@ const Item = props => {
   }
 
   return (
-    <div className={styles.Item} style={bgCover}>
-      <h2>{props.name}</h2>
-      <Link to={`/story/${props.id}`}>Read</Link>
+    <div className={styles.Item} style={bgCover} id={`${props.stackId}-card-${props.num}`}>
+      <div className={styles.overlay}>
+        <h2>{props.name}</h2>
+        <Link to={`/story/${props.id}`}>Read</Link>
+      </div>
     </div>
   )
 }
