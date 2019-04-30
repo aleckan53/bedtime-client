@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { Link } from 'react-router-dom'
 import {
-  FaBars as Menu,
   FaBookOpen as Book,
   FaEdit as Edit,
   FaList as List,
@@ -12,7 +11,7 @@ import {
 const Nav = props => {
 
   const [checked, setChecked] = useState(false)
-  console.log(checked)
+
   return (
     <nav className={styles.Nav}>
       <div className={styles.toogleBtn}>

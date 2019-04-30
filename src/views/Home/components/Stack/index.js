@@ -63,15 +63,15 @@ const Stack = props => {
       thirdCard.style.transform = 'scale(.8,.8)'
       thirdCard.style.zIndex = '2'
 
-      const newState = state
-      const firstItem = newState.shift()
+      const firstItem = state[0]
+      const newState = state.slice(1)      
       setState([...newState, firstItem])
     }, 300)
   }
 
+  console.log(state)
+
   const handlePrev = () => {
-
-
 
     setState([state.pop(), ...state.slice(0, state.length)])
   }
@@ -88,7 +88,7 @@ const Stack = props => {
       <div className={styles.controls}>
         <button onClick={handlePrev} ><Left/></button>
         <span>........</span>
-        <button onClick={handleNext} disabled={diableBtn}><Right/></button>
+        <button onClick={handleNext} disabled={diableBtn} id={props.stackId}><Right/></button>
       </div>
     </div>
   )
