@@ -1,0 +1,75 @@
+.toogleBtn {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  border: 1px solid black;
+  padding: .5rem;
+  border-radius: 10px;
+  margin: 5% 5% 5% auto;
+
+}
+
+.toogleBtn input[type='checkbox']{
+  position: absolute;
+  z-index: 1;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  padding: .5rem;
+}
+
+.toogleBtn svg {
+  position: absolute;
+  z-index: 0;
+  font-size: 1.5rem;
+}
+
+.dropDown {
+  width: 7rem;
+  margin-left: auto;
+  margin-right: 5%;
+  max-height: 220px;
+  transition: max-height 1s ease;
+  overflow: hidden;
+}
+
+.dropDown ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 7rem;
+}
+
+.dropDown li {
+  width: 7rem;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 1rem
+}
+
+.dropDown span {
+ justify-self: flex-start;
+}
+
+.dropDown svg {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  border: 1px solid black;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+.dropDown a {
+  text-decoration: none;
+  color: black;
+}
+

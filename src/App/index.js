@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Api from './api'
 import { Home, Editor, Story } from 'views'
 import { Switch } from 'react-router-dom'
-import { Route, Aside } from 'components/index'
+import { Route, Nav } from 'components/index'
 
 
 const App = props => {
@@ -15,7 +15,7 @@ const App = props => {
   
   return (
     <div className='App'>
-      <Aside/>
+      <Nav/>
       <main>
         <Switch>
           <Route path='/editor' component={Editor}/>

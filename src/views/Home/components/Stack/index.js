@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 import Item from './components/Item'
+import { FaSearch as Icon } from "react-icons/fa"
 
 const Stack = props => {
 
@@ -22,8 +23,11 @@ const Stack = props => {
   }
 
   return (
-    <>
-      <h1 className={styles.title}>{props.title}</h1>
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <h1 className={styles.title}>{props.title}</h1>
+        <Icon/>
+      </div>
       <div className={styles.Stack}>
         {stories}
       </div>
@@ -31,7 +35,7 @@ const Stack = props => {
         <button onClick={handlePrev}>Prev</button>
         <button onClick={handleNext}>Next</button>
       </div>
-    </>
+    </div>
   )
 }
 

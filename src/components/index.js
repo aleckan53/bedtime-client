@@ -1,7 +1,7 @@
 import Route from './Route'
-import Aside from './Aside'
+import Nav from './Nav'
 
 export {
-  Route, Aside
+  Route, Nav
 }
 

@@ -1,10 +1,14 @@
+.wrapper {
+  margin-bottom: 2rem;
+}
+
 .Stack {
   position: relative;
   height: 350px;
 }
 
 .title {
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
 }
 
 .controls {
@@ -13,3 +17,13 @@
   justify-content: space-between
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header svg {
+  font-size: 1.2rem;
+  margin: 0 0 2rem;
+}
