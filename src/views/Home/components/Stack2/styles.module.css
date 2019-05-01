@@ -1,0 +1,52 @@
+.stack {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  height: 300px;
+}
+
+.item {
+  background: red;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  transition: all 1s ease;
+  left: 0;
+  background-position: center ;
+  background-size: cover ;
+  background-repeat: no-repeat ;
+}
+
+.itemLeftHidden {
+  z-index: 6;
+  left: -100%;
+  opacity: 0;
+}
+
+.itemFirst {
+  z-index: 5;
+  background: blue;
+  left: 0;
+}
+
+.itemSecond {
+  z-index: 4;
+  background: green;
+  left: 15%;
+  transform: scale(.9,.9);
+}
+
+.itemThird {
+  z-index: 3;
+  background: red;
+  left: 30%;
+  transform: scale(.8,.8);
+}
+
+.itemHidden {
+  transition: none;
+  z-index: 2;
+  opacity: 0;
+  left: 30%;
+}
+

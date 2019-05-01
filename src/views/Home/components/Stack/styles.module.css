@@ -25,7 +25,8 @@
 .controls {
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: center;
 }
 
 .controls button {
@@ -35,8 +36,27 @@
   margin: 0;
   width: 1rem;
   height: 1rem;
+  transition: all .3s ease
 }
 
 .controls svg {
   font-size: 1rem;
+}
+
+.dotsWrapper {
+  max-width: 80%;
+  height: 100%;
+}
+
+.dot {
+  width: .5rem;
+  height: .5rem;
+  border: 1px solid black;
+  border-radius: 200%;
+  display: inline-block;
+  margin: 0 .3rem;
+}
+
+.active {
+  background: black;
 }

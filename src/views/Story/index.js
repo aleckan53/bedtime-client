@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Api from './api'
 import styles from './styles.module.css'
+
 const Story = props => {
 
   const [story, setStory] = useState({})
@@ -15,6 +16,7 @@ const Story = props => {
 
   return (
     <div className={styles.Story}>
+      <p>Estimated read time: {`1 min`}</p>
       <h1>{story.name}</h1>
       <h3>Written by: {story.author}</h3>
       <div dangerouslySetInnerHTML={{__html: story.content}}>

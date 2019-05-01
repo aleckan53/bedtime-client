@@ -33,3 +33,7 @@ section {
 main {
   height: 100%;
 }
+
+button, a, svg, input[type='checkbox'] {
+  cursor: pointer;
+}

@@ -9,7 +9,12 @@ const Item = props => {
   }
 
   return (
-    <div className={styles.Item} style={bgCover} id={`${props.stackId}-card-${props.num}`}>
+    <div 
+      // onTouchStart={e=>console.log(e.touches[0].pageX)}
+      // onTouchEnd={e=>console.log(e.changedTouches[0].pageX)}
+      className={styles.Item} 
+      style={bgCover} 
+      id={`${props.stackId}-card-${props.num}`}>
       <div className={styles.overlay}>
         <h2>{props.name}</h2>
         <Link to={`/story/${props.id}`}>Read</Link>

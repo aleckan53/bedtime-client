@@ -44,7 +44,7 @@
   left: 5%;
   line-height: 1.5;
   font-weight: 600;
-
+  transform: scale(1,1);
 }
 
 .Item h2 {
