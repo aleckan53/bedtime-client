@@ -63,20 +63,3 @@ const Stack = props => {
 }
 
 export default Stack
-
-
-  // const incIndex = (idx, setIdx, items) => {
-  //   if(idx === (items.length-1)) {
-  //     setIdx(0)
-  //   } else {
-  //     setIdx(idx++)
-  //   }
-  // }
-
-  // const decIndex = (idx, setIdx, items) => {
-  //   if(!idx) {
-  //     setIdx(items.length-1)
-  //   } else {
-  //     setIdx(idx--)
-  //   }
-  // }

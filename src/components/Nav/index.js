@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 import { Link } from 'react-router-dom'
+import Service from './service'
 import {
   FaBookOpen as Book,
   FaEdit as Edit,
@@ -12,8 +13,36 @@ const Nav = props => {
 
   const [checked, setChecked] = useState(false)
 
+  const handleLogOut = () => {
+
+  }
+
+  const logBtn = () => {
+    if(!!Service.getAuthToken()) {
+      return (
+        <Link to='/' onClick={() => {
+          setChecked(false)
+          Service.clearAuthToken()
+        }}>
+          <li>
+            <span>Logout</span><Book/>
+          </li>          
+        </Link>
+      )
+    } else {
+      return (
+        <Link to='/auth' onClick={() => setChecked(false)}>
+          <li>
+            <span>Login</span><Book/>
+          </li>          
+        </Link>
+      )
+    }
+
+  }
+
   return (
-    <nav className={styles.Nav}>
+    <nav className={styles.Nav} onMouseLeave={() => setChecked(false)}>
       <div className={styles.toogleBtn}>
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>
@@ -30,11 +59,7 @@ const Nav = props => {
               <span>Editor</span><Edit/>
             </li>          
           </Link>
-          <Link to='/auth' onClick={() => setChecked(false)}>
-            <li>
-              <span>Login</span><Book/>
-            </li>          
-          </Link>
+          {logBtn()}
         </ul>
       </div>
     </nav>

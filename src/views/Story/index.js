@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Api from './api'
 import styles from './styles.module.css'
+import config from 'config'
+import { Link } from 'react-router-dom'
 
 const Story = props => {
 
@@ -14,15 +16,30 @@ const Story = props => {
     }
   }, [props.match.params.id])
 
-  return (
-    <div className={styles.Story}>
+  const { link, name } = props.stories.find(s => s.id === Number(props.match.params.id)) || {
+    link: '',
+    name: ''
+  }
+  console.log(link)
+  const hasToken = !!window.sessionStorage.getItem(config.TOKEN_NAME)
+  return !hasToken ? (
+    <section className={styles.unauth}>
+      <h1>Please login or signup to read the story</h1>
+      <img src={link} alt={name}/>
+      <div>
+        <Link to='/auth'>Authorize</Link>
+        <Link to='/home'>Back to home</Link>
+      </div>
+    </section>
+    ) : (
+    <section className={styles.Story}>
       <p>Estimated read time: {`1 min`}</p>
       <h1>{story.name}</h1>
       <h3>Written by: {story.author}</h3>
       <div dangerouslySetInnerHTML={{__html: story.content}}>
       </div>
-    </div>
-  )
+    </section>
+    )
 }
 
 export default Story

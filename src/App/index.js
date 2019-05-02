@@ -21,7 +21,7 @@ const App = props => {
           <Route path='/auth' component={Authorization}/>
           <Route path='/editor' component={Editor}/>
           <Route path='/home' component={Home} stories={state}/>
-          <Route path='/story/:id' component={Story}/>
+          <Route path='/story/:id' component={Story} stories={state}/>
         </Switch>
       </main>
     </div>

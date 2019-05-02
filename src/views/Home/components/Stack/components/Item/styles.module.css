@@ -32,8 +32,6 @@
 }
 
 .Item a {
-  position: absolute;
-  bottom: 5%;
   background: blue;
   color: white;
   text-decoration: none;
@@ -41,17 +39,22 @@
   width: 5rem;
   text-align: center;
   height: 1.5rem;
-  left: 5%;
   line-height: 1.5;
   font-weight: 600;
-  transform: scale(1,1);
+  display: block;
+  margin-left: 1rem;
 }
 
 .Item h2 {
-  position: absolute;
-  bottom: 15%;
-  left: 5%;
   color: white;
+  margin-top: 250px;
+  margin-left: 1rem;
 }
 
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
 

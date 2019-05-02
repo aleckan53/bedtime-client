@@ -33,7 +33,7 @@
   margin-left: auto;
   margin-right: 5%;
   max-height: 220px;
-  transition: max-height 1s ease;
+  transition: max-height .8s ease;
   overflow: hidden;
 }
 

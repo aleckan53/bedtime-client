@@ -17,7 +17,10 @@ const Authorization = props => {
 
     if (formType) {
       Api.login(state.values)
-        .then(Service.saveToken)
+        .then(({authToken}) => {
+          Service.saveToken(authToken)
+          props.history.push('/home')
+        })
         .catch(err => {
           setState({
             ...state,
@@ -44,6 +47,23 @@ const Authorization = props => {
         })
     }
   }
+
+  const handleGuestLogin = () => {
+    Api.login({
+      user_name: 'guest',
+      password: 'guest123'
+    })
+    .then(({authToken}) => {
+      Service.saveToken(authToken)
+      props.history.push('/home')
+    })
+    .catch(err => {
+      setState({
+        ...state,
+        error: err.message
+      })
+    })
+  }
   // switches fieldset
   const [formType, switchForm] = useState(true)
   const fieldset = formType ? <Login state={state} setState={setState}/> : <Signup state={state} setState={setState}/>
@@ -65,7 +85,7 @@ const Authorization = props => {
       </form>
       <div className={styles.btnWrapper}>
         <button type='button' onClick={handleFormSwitch}>{btnTitle}</button>
-        <button type='button'>Continue as a guest</button>
+        <button type='button' onClick={handleGuestLogin}>Continue as a guest</button>
       </div>
     </section>
   )
