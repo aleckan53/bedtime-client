@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Service from '../../service'
+import Service from './service'
 import {
   IoIosCheckmark as Ok,
   IoIosClose as Bad
@@ -15,21 +15,12 @@ const Signup = props => {
   })
 
   const { state, setState } = props
-  useEffect(() => {
 
+  useEffect(() => {
     setState({
       ...state,
       formValid: !Object.values(valid).includes(false)
     })
-
-    return () => {
-      setState({
-        formValid: false,
-        fieldsValid: {},
-        values: {},
-        error: null
-      })
-    }
   // eslint-disable-next-line
   }, [valid])
 
@@ -51,49 +42,24 @@ const Signup = props => {
     })
   }
 
-  const attr = {
-    user_name: {
-      name: 'user_name',
-      type: 'text',
-      placeholder: '4-20 characters',
-      autoComplete: 'username',
-      required: true,
-    },
-    password: {
-      name: 'password',
-      type: 'password',
-      placeholder: '8-20 chars, at least 1 number',
-      autoComplete: 'new-password',
-      required: true,
-    },
-    first_name: {
-      name: 'first_name',
-      type: 'text',
-      placeholder: 'Letters only',
-      autoComplete: 'given-name',
-    },
-    last_name: {
-      name: 'last_name',
-      type: 'text',
-      placeholder: 'Letters only',
-      autoComplete: 'family-name',
+  const isValid = (field) => {
+    if(state.values[field]) {
+      return valid[field] ? <Ok/> : <Bad/>
     }
   }
 
-  const isValid = (field) => {
-    return field ? <Ok/> : <Bad/>
-  }
+  const attr = Service.genAttributes(props)
 
   return (
     <fieldset>
       <legend>Sign up</legend>
-      <label htmlFor='user_name'>User name</label> {isValid(valid.user_name)}
+      <label htmlFor='user_name'>User name</label> {isValid('user_name')}
       <input {...attr.user_name} onChange={handleChange} autoFocus/>
-      <label htmlFor='password'>Password</label> {isValid(valid.password)}
+      <label htmlFor='password'>Password</label> {isValid('password')}
       <input {...attr.password} onChange={handleChange}/>
-      <label htmlFor='first_name'>First name</label> {isValid(valid.first_name)}
+      <label htmlFor='first_name'>First name</label> {isValid('first_name')}
       <input {...attr.first_name} onChange={handleChange}/>
-      <label htmlFor='last_name'>Last name</label> {isValid(valid.last_name)}
+      <label htmlFor='last_name'>Last name</label> {isValid('last_name')}
       <input {...attr.last_name} onChange={handleChange}/>
       <p>{state.error}</p>
       <button type='submit' disabled={!state.formValid}>Submit</button>

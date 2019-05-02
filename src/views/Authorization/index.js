@@ -3,44 +3,40 @@ import styles from './styles.module.css'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Api from './api'
+import Service from './service'
 
 const Authorization = props => {
   const [state, setState] = useState({
     formValid: false,
-    values: {
-      user_name: ''
-    },
+    values: {},
     error: null,
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setState({
-      formValid: false,
-      values: {},
-      error: null,  
-    })
-
     if (formType) {
       Api.login(state.values)
-        .then(console.log)
-    }
-
-    if (!formType) {
+        .then(Service.saveToken)
+        .catch(err => {
+          setState({
+            ...state,
+            error: err.message
+          })
+        })
+    } else {
       Api.signup(state.values)
         .then(({user_name}) => {
           switchForm(true)
           setState({
-            ...state,
+            formValid: false,
+            error: null,
             values: {
-              ...state.values,
               user_name
             }
           })
         })
         .catch(err => {
-          console.log(err)
           setState({
             ...state,
             error: err.message
@@ -49,9 +45,18 @@ const Authorization = props => {
     }
   }
   // switches fieldset
-  const [formType, switchForm] = useState(false)
+  const [formType, switchForm] = useState(true)
   const fieldset = formType ? <Login state={state} setState={setState}/> : <Signup state={state} setState={setState}/>
   const btnTitle = formType ? 'Signup' : 'Login'
+
+  const handleFormSwitch = () => {
+    setState({
+      formValid: false,
+      values: {},
+      error: null,  
+    })
+    switchForm(!formType)
+  }
 
   return (
     <section className={styles.Auth}>
@@ -59,7 +64,7 @@ const Authorization = props => {
         {fieldset}
       </form>
       <div className={styles.btnWrapper}>
-        <button type='button' onClick={() => switchForm(!formType)}>{btnTitle}</button>
+        <button type='button' onClick={handleFormSwitch}>{btnTitle}</button>
         <button type='button'>Continue as a guest</button>
       </div>
     </section>
