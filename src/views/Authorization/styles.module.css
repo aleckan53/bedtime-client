@@ -1,29 +1,30 @@
-.Login form {
+.Auth form {
   border: 1px solid black;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 1rem
 }
 
-.Login fieldset {
+.Auth fieldset {
   border: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-.Login legend{
+.Auth legend{
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.Login label {
-  display: block;
+.Auth label {
+  display: inline-block;
   margin-bottom: .5rem
 }
 
-.Login input{
+.Auth input{
   display: block;
   width: 100%;
   height: 1.9rem;
@@ -35,7 +36,13 @@
   padding: 0 10px;
 }
 
-.Login button {
+.Auth input::placeholder {
+  font-style: italic;
+  font-size: .9rem;
+  opacity: .5;
+}
+
+.Auth button {
   width: 100%;
   border: 1px solid black;
   border-radius: 10px;
@@ -43,8 +50,22 @@
   box-sizing: border-box;
   font-size: .9rem;
   font-weight: 600;
-  margin-top: 1.2rem
+  margin-top: 1.2rem;
+}
 
+.Auth svg {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+  right: 0;
+}
+
+.Auth fieldset p {
+  text-align: center;
+  font-size: .9rem;
+  color: red;
+  transition: all .5s ease;
+  margin-bottom: 0;
 }
 
 .btnWrapper {

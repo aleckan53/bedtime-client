@@ -18,7 +18,7 @@ const App = props => {
       <Nav/>
       <main>
         <Switch>
-          <Route path='/login' component={Authorization}/>
+          <Route path='/auth' component={Authorization}/>
           <Route path='/editor' component={Editor}/>
           <Route path='/home' component={Home} stories={state}/>
           <Route path='/story/:id' component={Story}/>

@@ -30,7 +30,7 @@ const Nav = props => {
               <span>Editor</span><Edit/>
             </li>          
           </Link>
-          <Link to='/login' onClick={() => setChecked(false)}>
+          <Link to='/auth' onClick={() => setChecked(false)}>
             <li>
               <span>Login</span><Book/>
             </li>          
