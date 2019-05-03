@@ -1,42 +1,61 @@
 .stack {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  height: 120vw;
+  margin-bottom: 3rem;
   position: relative;
 }
 
+.deck {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 .card {
-  height: 250px;
-  width: 150px;
+  border-radius: 15px;
   position: absolute;
-  left: 0;
-  transition: all 1s ease;
+  height: 100vw;
+  max-height: 530px;
+  max-width: 350px;
+  width: 76%;
+  z-index: 0;
+  transition: all .6s ease;
+  box-shadow: 10px 10px 10px -10px black;
 }
 
-
-.focused {
+.focus {
   background: purple;
-  z-index: 5;
+  z-index: 300;
+  left: 0;
+  transform: scale(1,1);
+  transition: opacity 0s, left .6s ease, transform .8s ease, z-index 0s;
 }
 
-.focused:right() {
-  background: red;
+.second {
   left: 15%;
+  z-index: 200;
+  transform: scale(.9,.9);
 }
 
+.third {
+  left: 30%;
+  z-index: 100;
+  transform: scale(.8,.8);
+  transition: z-index .6s ease, opacity 3s ease, transform .6s ease, left .6s ease;
+}
 .left{
   left: -100%;
+  z-index: 400;
+  opacity: 0;
+  transform: scale(1.2,1.2);
+  transition: z-index 2s ease, opacity 1s ease, transform 1s ease, left .6s ease;
 }
 
-/* .card:not(.focused):nth-child(n+2) {
-  background: red;
-  z-index: 4;
-  transform: scale(.9,.9);
-  left: 15%;
+.controls {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.card:not(.focused):nth-child(n+3) {
-  background: green;
-  left: 30%;
-  transform: scale(.8,.8);
-  z-index: 3;
-} */
