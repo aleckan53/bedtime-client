@@ -1,4 +1,4 @@
-import App from 'App'
+import App from 'views/App'
 import { renderHook, act } from 'react-hooks-testing-library'
 
 describe('<App/>', () => {

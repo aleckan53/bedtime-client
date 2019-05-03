@@ -1,4 +1,4 @@
-import Slider from 'views/Home/components/Stack'
+import Slider from 'views/App/views/Home/components/Stack'
 import { renderHook, act } from 'react-hooks-testing-library'
 
 describe('<Slider/>', () => {

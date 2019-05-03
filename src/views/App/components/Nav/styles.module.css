@@ -1,3 +1,22 @@
+.logo {
+  position: absolute;
+  left: var(--padding);
+  background: url('./assets/logo.png');
+  background-position: left top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 50px;
+  top: -5px;
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  opacity: .7;
+  font-weight: 600;
+  text-shadow: 3px 2px 3px rgba(0,0,0,.3);
+}
+
 .toogleBtn {
   height: 1.5rem;
   width: 1.5rem;
@@ -6,7 +25,6 @@
   padding: .5rem;
   border-radius: 10px;
   margin: 5% 5% 5% auto;
-
 }
 
 .toogleBtn input[type='checkbox']{

@@ -23,7 +23,8 @@ code {
   --heading-color: white;
   --menu-btn: black;
   --padding-side: 0 5%;
-  --btn-1: #5061e7
+  --btn-1: #5061e7;
+  --padding: 5%;
 } 
 
 section {

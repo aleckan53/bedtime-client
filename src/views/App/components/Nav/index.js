@@ -31,7 +31,7 @@ const Nav = props => {
       )
     } else {
       return (
-        <Link to='/auth' onClick={() => setChecked(false)}>
+        <Link to='/app/auth' onClick={() => setChecked(false)}>
           <li>
             <span>Login</span><Book/>
           </li>          
@@ -43,18 +43,19 @@ const Nav = props => {
 
   return (
     <nav className={styles.Nav}>
+      <div className={styles.logo}>Bedtime</div>
       <div className={styles.toogleBtn}>
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>
       </div>
       <div className={styles.dropDown} style={{maxHeight: checked ? '220px' : '0px'}}>
         <ul>
-          <Link to='/home' onClick={() => setChecked(false)}>
+          <Link to='/app' onClick={() => setChecked(false)}>
             <li>
               <span>Home</span><Home/>
             </li>          
           </Link>
-          <Link to='/editor' onClick={() => setChecked(false)}>
+          <Link to='/app/editor' onClick={() => setChecked(false)}>
             <li>
               <span>Editor</span><Edit/>
             </li>          
