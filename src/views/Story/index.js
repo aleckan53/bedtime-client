@@ -20,15 +20,14 @@ const Story = props => {
     link: '',
     name: ''
   }
-  console.log(link)
   const hasToken = !!window.sessionStorage.getItem(config.TOKEN_NAME)
   return !hasToken ? (
     <section className={styles.unauth}>
       <h1>Please login or signup to read the story</h1>
       <img src={link} alt={name}/>
       <div>
-        <Link to='/auth'>Authorize</Link>
-        <Link to='/home'>Back to home</Link>
+        <Link to='/auth'>Login / Signup</Link>
+        <Link to='/home'>Back to home page</Link>
       </div>
     </section>
     ) : (

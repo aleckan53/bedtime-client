@@ -42,7 +42,7 @@ const Nav = props => {
   }
 
   return (
-    <nav className={styles.Nav} onMouseLeave={() => setChecked(false)}>
+    <nav className={styles.Nav}>
       <div className={styles.toogleBtn}>
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>
