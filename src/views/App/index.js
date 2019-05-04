@@ -18,10 +18,10 @@ const App = props => {
       <Nav/>
       <main>
         <Switch>
+          <Route path='/app/story/:id' component={Story} stories={state}/>
           <Route path='/app/auth' component={Authorization}/>
           <Route path='/app/editor' component={Editor}/>
           <Route path='/app' component={Home} stories={state}/>
-          <Route path='/app/story/:id' component={Story} stories={state}/>
         </Switch>
       </main>
     </div>

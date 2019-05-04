@@ -3,17 +3,40 @@
 }
 
 .Story {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.Story h1 {
   text-align: center;
-  line-height: 2;
-  padding: 10%
+  margin: 3rem 0;
 }
 
 .Story p {
   font-size: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .unauth h1 {
   text-align: center;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top p {
+  font-size: .8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.top h3 {
+  font-size: .8rem;
+  padding: 0;
+  margin: 0;
+  text-align: right;
 }
 
 .unauth a {
@@ -35,4 +58,29 @@
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.controls {
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 2rem 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: .1;
+  transition: all 1s ease;
+  position: sticky;
+  top: 20px;
+}
+
+.controls:hover {
+  opacity: .9;
+}
+
+.controls svg {
+  
 }
