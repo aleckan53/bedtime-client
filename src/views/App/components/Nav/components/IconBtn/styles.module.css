@@ -1,0 +1,30 @@
+.IconBtn li {
+  width: 7rem;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.IconBtn span {
+  justify-self: flex-start;
+ }
+ 
+ .IconBtn svg {
+   font-size: 1.5rem;
+   margin-left: 1rem;
+   border: 1px solid var(--border-1);
+   padding: .5rem;
+   border-radius: 10px;
+   color: var(--nav-btn);
+ }
+ 
+ .IconBtn {
+   text-decoration: none;
+   color: black;
+   box-sizing: border-box;
+ }

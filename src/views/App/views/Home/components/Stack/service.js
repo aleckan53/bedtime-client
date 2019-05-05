@@ -58,9 +58,13 @@ export default {
         : <Component key={idx} className='left' {...story}/>
     ))
   },
-  mapIndicators(count) {
-    const dots = [].fill(count).map((n,i) => <span className='dot' id={`dot-${i}`} key={i}/>)
-    
-    return dots
+  mapIndicators(count, title) {
+    return new Array(count).fill().map((n,i) => {
+      if (!i) {
+        return <span className='dot on' id={`${title}-${i}`} key={i}/>
+      }
+
+      return <span className='dot' id={`${title}-${i}`} key={i}/>
+    })
   }
 }

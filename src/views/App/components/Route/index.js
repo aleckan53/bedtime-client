@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route as StandardRoute } from 'react-router-dom'
+import { AnimatedRoute } from 'react-router-transition'
 
 const Route = props => {
   return (

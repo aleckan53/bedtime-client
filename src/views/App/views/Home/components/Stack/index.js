@@ -3,7 +3,6 @@ import Card from './components/Card'
 import Service from './service'
 import './styles.css'
 import { 
-  FaSearch as Icon,
   FaArrowLeft as Left,
   FaArrowRight as Right, 
 } from "react-icons/fa"
@@ -21,8 +20,8 @@ const Stack = props => {
         <button onClick={() => Service.handlePrev(props.title)}>
           <Left/>
         </button>
-        <div>
-          {Service.mapIndicators(5)}
+        <div className='dots'>
+          {Service.mapIndicators(props.data.length, props.title)}
         </div>
         <button onClick={() => Service.handleNext(props.title)}>
           <Right/>

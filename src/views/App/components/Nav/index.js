@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { Link } from 'react-router-dom'
 import Service from './service'
+import IconBtn from './components/IconBtn'
 import {
   FaBookOpen as Book,
   FaEdit as Edit,
@@ -13,56 +13,43 @@ const Nav = props => {
 
   const [checked, setChecked] = useState(false)
 
-  const handleLogOut = () => {
-
-  }
-
-  const logBtn = () => {
-    if(!!Service.getAuthToken()) {
-      return (
-        <Link to='/' onClick={() => {
-          setChecked(false)
-          Service.clearAuthToken()
-        }}>
-          <li>
-            <span>Logout</span><Book/>
-          </li>          
-        </Link>
-      )
-    } else {
-      return (
-        <Link to='/app/auth' onClick={() => setChecked(false)}>
-          <li>
-            <span>Login</span><Book/>
-          </li>          
-        </Link>
-      )
-    }
-
-  }
+  const logBtn = () => (
+    !!Service.getAuthToken() 
+    ? <IconBtn
+      to='/app/auth'
+      title='Logout'
+      icon={Book}
+      onClick={() => {
+        setChecked(false)
+        Service.clearAuthToken()
+      }}/>
+    : <IconBtn
+      to='/app/auth'
+      title='Login'
+      icon={Book}
+      onClick={() => setChecked(false)}/>
+  )
 
   return (
-    <nav className={styles.Nav}>
+    <nav className={styles.Nav}  style={{height: checked ? '18rem' : '5rem'}}>
       <div className={styles.logo}>Bedtime</div>
       <div className={styles.toogleBtn}>
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>
       </div>
-      <div className={styles.dropDown} style={{maxHeight: checked ? '220px' : '0px'}}>
-        <ul>
-          <Link to='/app' onClick={() => setChecked(false)}>
-            <li>
-              <span>Home</span><Home/>
-            </li>          
-          </Link>
-          <Link to='/app/editor' onClick={() => setChecked(false)}>
-            <li>
-              <span>Editor</span><Edit/>
-            </li>          
-          </Link>
-          {logBtn()}
-        </ul>
-      </div>
+      <ul className={styles.dropDown} style={{visibility: checked ? 'visible' : ''}}>
+        <IconBtn
+          to='/app/home'
+          title={'Home'}
+          icon={Home}
+          onClick={() => setChecked(false)}/>
+        <IconBtn
+          to='/app/editor'
+          title={'Editor'}
+          icon={Edit}
+          onClick={() => setChecked(false)}/>
+        {logBtn()}
+      </ul>
     </nav>
   )
 }

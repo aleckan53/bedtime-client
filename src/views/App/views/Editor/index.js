@@ -14,17 +14,19 @@ const Editor = props => {
   const handleSubmit = () => {
     // Api submit
     // on succcess message
+    console.log(state)
   }
 
-  console.log(state)
   return (
-    <section>
-      <ReactQuill 
-        theme='snow'
-        value={state}
-        onChange={handleChange}/>
-        <button onClick={handleSubmit}>Preview</button>
-    </section>
+    <>
+      <section className='editor'>
+        <ReactQuill 
+          theme='snow'
+          value={state}
+          onChange={handleChange}/>
+      </section>
+      <button className='submit' onClick={handleSubmit}>Submit</button>
+    </>
   )
 }
 

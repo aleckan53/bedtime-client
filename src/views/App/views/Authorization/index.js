@@ -46,7 +46,7 @@ const Authorization = props => {
           })
         })
     }
-  }
+  } 
 
   const handleGuestLogin = () => {
     Api.login({
@@ -55,7 +55,10 @@ const Authorization = props => {
     })
     .then(({authToken}) => {
       Service.saveToken(authToken)
-      props.history.push('/home')
+
+      const { location, history } = props
+      const destination = (location.state || {}).from || '/app/home'
+      history.push(destination)
     })
     .catch(err => {
       setState({

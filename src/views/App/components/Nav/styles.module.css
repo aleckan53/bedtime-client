@@ -7,24 +7,23 @@
   background-repeat: no-repeat;
   width: 120px;
   height: 50px;
-  top: -5px;
+  top: 13px;
   text-align: right;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  opacity: .7;
   font-weight: 600;
-  text-shadow: 3px 2px 3px rgba(0,0,0,.3);
+  color: var(--main-text)
 }
 
 .toogleBtn {
   height: 1.5rem;
   width: 1.5rem;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid var(--border-1);
   padding: .5rem;
   border-radius: 10px;
-  margin: 5% 5% 5% auto;
+  margin: 0 5% 5% auto;
 }
 
 .toogleBtn input[type='checkbox']{
@@ -44,15 +43,15 @@
   position: absolute;
   z-index: 0;
   font-size: 1.5rem;
+  color: var(--nav-btn);
+  transition: all 1s ease;
 }
 
 .dropDown {
   width: 7rem;
-  margin-left: auto;
-  margin-right: 5%;
+  margin: 2.1rem 5% 0 auto;
   max-height: 220px;
   transition: max-height .8s ease;
-  overflow: hidden;
 }
 
 .dropDown ul{
@@ -62,32 +61,9 @@
   width: 7rem;
 }
 
-.dropDown li {
-  width: 7rem;
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5px 0;
-  box-sizing: border-box;
-  border-radius: 20px;
-  margin-bottom: 1rem
+.Nav {
+  height: 5rem;
+  padding-top: 5%;
+  transition: all 1s ease;
+  overflow: hidden;
 }
-
-.dropDown span {
- justify-self: flex-start;
-}
-
-.dropDown svg {
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  border: 1px solid black;
-  padding: .5rem;
-  border-radius: 10px;
-}
-
-.dropDown a {
-  text-decoration: none;
-  color: black;
-}
-

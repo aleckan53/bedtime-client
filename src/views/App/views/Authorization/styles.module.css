@@ -1,8 +1,9 @@
 .Auth form {
-  border: 1px solid black;
+  border: 1px solid var(--border-2);
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 1rem
+  padding: 1rem;
+  box-shadow: 3px 5px 10px -5px var(--box-shadow);
 }
 
 .Auth fieldset {
@@ -29,11 +30,12 @@
   width: 100%;
   height: 1.9rem;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--border-1);
   margin-bottom: 1rem;
   box-sizing: border-box;
   font-size: 1rem;
   padding: 0 10px;
+  background: rgba(255,255,255,.2)
 }
 
 .Auth input::placeholder {
@@ -44,13 +46,19 @@
 
 .Auth button {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid var(--border-1);
   border-radius: 10px;
   height: 1.9rem;
   box-sizing: border-box;
   font-size: .9rem;
   font-weight: 600;
   margin-top: 1.2rem;
+  box-shadow: 3px 5px 10px -5px var(--box-shadow);
+}
+
+.Auth button:focus {
+  outline: none;
+  box-shadow: 0 0 15px -5px blue;
 }
 
 .Auth svg {

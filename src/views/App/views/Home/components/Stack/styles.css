@@ -1,5 +1,5 @@
 .stack {
-  height: 130vw;
+  height: 135vw;
   max-height: 570px;
   margin-bottom: 3rem;
   position: relative;
@@ -19,11 +19,14 @@
   height: 100vw;
   max-height: 530px;
   max-width: 350px;
-  width: 240px;
+  width: 220px;
   z-index: 0;
   transition: all .6s ease;
   box-shadow: 10px 10px 10px -10px black;
   box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card a {
@@ -34,7 +37,7 @@
   background: blue;
   color: white;
   width: 5rem;
-  height: 28px;
+  height: 26px;
   border-radius: 15px;
   display: grid;
   place-content: center;
@@ -84,6 +87,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 
 .controls button {
@@ -102,4 +106,22 @@
 
 .stack h1 {
   margin-bottom: 2rem;
+}
+
+.dot {
+  background: rgba(0,0,0,.4);
+  width: .5rem;
+  height: .5rem;
+  display: inline-block;
+  content: '';
+  border-radius: 50%;
+  margin: 0 .5rem;
+}
+
+.on {
+  background: black;
+}
+
+.dots {
+  margin-bottom: 7px;
 }
