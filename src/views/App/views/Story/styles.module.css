@@ -18,6 +18,7 @@
 .Story p {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .unauth h1 {
@@ -114,4 +115,29 @@
 
 .controls:hover {
   opacity: .9;
+}
+
+.up {
+  appearance: none;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 10px;
+  position: sticky;
+  display: block;
+  top: 1rem;
+  margin: 0 0 auto auto;
+  z-index: 0;
+
+}
+
+.up svg {
+  font-size: 1.5rem;
+  border: 1px solid var(--border-1);
+  padding: .5rem;
+  border-radius: 10px;
+  color: var(--nav-btn);
+  transition: all .6s ease;
+  color: var(--main-text);
 }

@@ -48,11 +48,6 @@ button, a, svg, input[type='checkbox'] {
   cursor: pointer;
 }
 
-input:focus {
-  outline: none;
-  box-shadow: 0 0 15px -5px var(--outline-color);
-}
-
 .App {
   height: 100%;
 }
@@ -100,4 +95,12 @@ main {
 
 button:disabled {
   opacity: .5;
+}
+
+
+input:focus,
+a:focus, 
+button:focus {
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+  outline: none;
 }

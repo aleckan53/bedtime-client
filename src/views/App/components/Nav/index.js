@@ -3,13 +3,13 @@ import styles from './styles.module.css'
 import Service from './service'
 import IconBtn from './components/IconBtn'
 import { Link } from 'react-router-dom'
-import {
-  FaBookOpen as Book,
-  FaEdit as Edit,
-  FaList as List,
-  FaHome as Home
-} from 'react-icons/fa'
-
+import { 
+  IoMdHome as Home,
+  IoIosList as List,
+  IoIosLogIn as Login,
+  IoIosLogOut as Logout,
+  IoMdBook as Edit
+  } from 'react-icons/io'
 const Nav = props => {
 
   const [checked, setChecked] = useState(false)
@@ -19,7 +19,8 @@ const Nav = props => {
     ? <IconBtn
       to='/app/auth'
       title='Logout'
-      icon={Book}
+      checked={checked}
+      icon={Logout}
       onClick={() => {
         setChecked(false)
         Service.clearAuthToken()
@@ -27,7 +28,8 @@ const Nav = props => {
     : <IconBtn
       to='/app/auth'
       title='Login'
-      icon={Book}
+      checked={checked}
+      icon={Login}
       onClick={() => setChecked(false)}/>
   )
 
@@ -38,15 +40,17 @@ const Nav = props => {
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>
       </div>
-      <ul className={styles.dropDown} style={{visibility: checked ? 'visible' : ''}}>
+      <ul className={styles.dropDown} style={{visibility: checked ? 'visible' : 'hidden'}}>
         <IconBtn
-          to='/app/home'
+          to='/app'
           title={'Home'}
+          checked={checked}
           icon={Home}
           onClick={() => setChecked(false)}/>
         <IconBtn
           to='/app/editor'
           title={'Editor'}
+          checked={checked}
           icon={Edit}
           onClick={() => setChecked(false)}/>
         {logBtn()}

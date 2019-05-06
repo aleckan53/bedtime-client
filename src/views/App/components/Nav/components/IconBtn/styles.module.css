@@ -35,3 +35,8 @@
  .IconBtn:hover svg {
    color: var(--main-color-2)
  }
+
+ .IconBtn:focus svg {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+ }

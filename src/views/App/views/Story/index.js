@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom'
 import { 
   IoIosVolumeHigh as Voice,
   IoMdSunny as Light,
-  IoIosMoon as Dark
+  IoIosMoon as Dark,
+  IoIosArrowUp as Up
 } from 'react-icons/io'
 
 const Story = props => {
 
   const hasToken = !!window.sessionStorage.getItem(config.TOKEN_NAME)
   const [story, setStory] = useState({content: ''})
-
   useEffect(() => {
     if(hasToken) {
       Api.getStoryById(props.match.params.id)
@@ -34,7 +34,6 @@ const Story = props => {
     return Math.ceil(content.length / 850)
   }
 
-
   return !hasToken ? (
     <section className={styles.unauth}>
       <h1>Please login or signup to read the story</h1>
@@ -49,6 +48,15 @@ const Story = props => {
     </section>
     ) : (
     <section className={styles.Story}>
+      <button className={styles.up} onClick={() => {
+          window.scrollTo({
+            top: 100,
+            left: 100,
+            behavior: 'smooth'
+          })
+        }}>
+        <Up/>
+      </button>
       <div className={styles.top}>
         <p>{calcReadTime(story.content)} min read time</p>
         <h3>Author: {story.author}</h3>

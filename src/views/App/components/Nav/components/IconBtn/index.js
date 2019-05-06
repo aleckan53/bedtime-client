@@ -13,7 +13,7 @@ const IconBtn = props => {
       onClick={onClick || ''}
       to={to || ''}>
       <li>
-        <span>{title || ''}</span>
+        <span style={{visibility: 'visible'}}>{title || ''}</span>
         <Icon/>
       </li>
     </Link>

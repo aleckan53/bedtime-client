@@ -65,8 +65,8 @@
 }
 
 .Auth button:focus {
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
   outline: none;
-  box-shadow: 0 0 15px -5px blue;
 }
 
 .Auth svg {

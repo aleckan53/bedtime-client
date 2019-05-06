@@ -27,6 +27,7 @@
   border-radius: 10px;
   margin-right: var(--padding);
   margin-left: auto;
+  z-index: 10;
 }
 
 .toogleBtn input[type='checkbox']{

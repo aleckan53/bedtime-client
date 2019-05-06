@@ -188,6 +188,11 @@
   background: var(--main-color-1);
 }
 
+.LandingPage .botBtn:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+}
+
 .LandingPage .soon {
   opacity: .8;
   font-size: .9rem;
