@@ -51,17 +51,20 @@
 @media (min-width: 850px) {
   .stack {
     height: 65vw;
+    grid-template-rows: 60px 75% 30px;
+  }
+  .card {
+    height: 65%;
   }
 }
 @media (min-width: 1100px) {
   .stack {
-    height: 55vw;
-    grid-template-rows: 60px 90% 30px;
+    height: 50vw;
   }
-  .card {
-    margin: 0 10%;
-    width: 60%;
-    height: 80%;
+}
+@media (min-width: 1250px) {
+  .stack {
+    height: 40vw;
   }
 }
 .card a {
@@ -97,7 +100,7 @@
   z-index: 300;
   left: 0;
   transform: scale(1,1);
-  transition: opacity 0s, left .6s ease, transform .6s ease, z-index .5s;
+  transition: opacity .5s, left .6s ease, transform .6s ease, z-index .5s;
 }
 
 .second {
@@ -110,14 +113,14 @@
   left: 30%;
   z-index: 100;
   transform: scale(.8,.8);
-  transition: z-index .6s ease, opacity 1.6s ease, transform .6s ease, left .6s ease;
+  transition: z-index .6s ease, opacity 2s ease, transform .6s ease, left .6s ease;
 }
 .left {
   left: -100%;
   z-index: 400;
   opacity: 0;
   transform: scale(1.2,1.2);
-  transition: z-index 1s ease, opacity 1s ease, transform 1s ease, left .6s ease;
+  transition: z-index 1s ease, opacity .3s ease, transform 1s ease, left .6s ease;
 }
 
 .controls {

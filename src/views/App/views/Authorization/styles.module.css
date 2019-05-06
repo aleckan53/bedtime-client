@@ -8,7 +8,7 @@
 
 .Auth fieldset {
   border: none;
-  margin: 0;
+  margin: 2rem var(--padding-2);
   padding: 0;
   position: relative;
 }
@@ -85,8 +85,20 @@
 }
 
 .btnWrapper {
-  padding: 1rem;
+  padding: 0 var(--padding-2);
   padding-top: 0;
+}
+.btnWrapper {
+  margin: 0 1rem;
+}
+
+@media (min-width: 1250px) {
+  .Auth form {
+    margin: 0 10%;
+  }
+  .btnWrapper {
+    margin: 0 9%;
+  }
 }
 
 .animate-enter {

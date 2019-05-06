@@ -33,6 +33,7 @@ code {
   --padding-side: 0 5%;
   --btn-1: #5061e7;
   --padding: 5%;
+  --padding-2: 5%;
   --border-1: rgba(255,255,255,.3);
   --border-2: rgba(255,255,255,.1);
   --opacity-bw: rgba(0,0,0,0.3);
@@ -68,6 +69,7 @@ main {
 @media (min-width: 500px) {
   :root {
     --padding: 10%;
+    --padding-2: 10%;
   }
 }
 
@@ -87,4 +89,15 @@ main {
   :root {
     --padding: 25%
   }
+}
+
+@media(min-width: 1250px) {
+  :root {
+    --padding: 25%;
+    --padding-2: 15%;
+  }
+}
+
+button:disabled {
+  opacity: .5;
 }

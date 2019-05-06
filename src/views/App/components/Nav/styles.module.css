@@ -53,7 +53,7 @@
 
 .dropDown {
   width: 7rem;
-  margin: 2.1rem 5% 0 auto;
+  margin: 2.1rem var(--padding) 0 auto;
   max-height: 220px;
   transition: max-height .8s ease;
 }
