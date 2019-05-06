@@ -1,25 +1,29 @@
 .stack {
-  height: 135vw;
-  max-height: 570px;
+  height: 120vw;
   margin-bottom: 3rem;
   position: relative;
+  color: var(--main-text);
+  margin-top: 1rem;
+  display: grid;
+  grid-template-areas: 'title' 'card' 'controls';
+  grid-template-rows: 30px 90% 30px;
+}
+
+.stack h1 {
+  margin-top: 0;
+  grid-area: 'title';
 }
 
 .deck {
   list-style: none;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 .card {
+  grid-area: 'card';
   border-radius: 15px;
   position: absolute;
-  height: 100vw;
-  max-height: 530px;
-  max-width: 350px;
-  width: 220px;
+  height: 80%;
+  width: 75%;
   z-index: 0;
   transition: all .6s ease;
   box-shadow: 10px 10px 10px -10px black;
@@ -29,20 +33,53 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: 500px) {
+  .stack {
+    height: 95vw;
+  }
+}
+@media (min-width: 630px) {
+  .stack {
+    height: 85vw;
+  }
+}
+@media (min-width: 750px) {
+  .stack {
+    height: 75vw;
+  }
+}
+@media (min-width: 850px) {
+  .stack {
+    height: 65vw;
+  }
+}
+@media (min-width: 1100px) {
+  .stack {
+    height: 55vw;
+    grid-template-rows: 60px 90% 30px;
+  }
+  .card {
+    margin: 0 10%;
+    width: 60%;
+    height: 80%;
+  }
+}
 .card a {
   position: absolute;
   bottom: 5%;
   left: 5%;
   text-decoration: none;
-  background: blue;
+  background: var(--main-color-1);
   color: white;
   width: 5rem;
-  height: 26px;
+  height: 22px;
   border-radius: 15px;
   display: grid;
   place-content: center;
   box-shadow: 3px 3px 5px -1px black;
-  font-weight: 600
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: .9rem
 }
 
 .card h2 {
@@ -52,6 +89,8 @@
   right: 5%;
   text-shadow: 5px 3px 6px black;
   font-size: 22px;
+  box-sizing: border-box;
+  font-weight: 400
 }
 
 .focus {
@@ -82,8 +121,7 @@
 }
 
 .controls {
-  position: absolute;
-  bottom: 0;
+  grid-area: 'controls';
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -94,6 +132,8 @@
   padding: 0;
   border: none;
   font-size: 1rem;
+  background: none;
+  color: var(--border-1);
 }
 
 .controls button:focus {
@@ -109,17 +149,18 @@
 }
 
 .dot {
-  background: rgba(0,0,0,.4);
+  background: var(--border-1);
   width: .5rem;
   height: .5rem;
   display: inline-block;
   content: '';
   border-radius: 50%;
   margin: 0 .5rem;
+  transition: all .6s ease;
 }
 
 .on {
-  background: black;
+  background: var(--main-color-1);
 }
 
 .dots {

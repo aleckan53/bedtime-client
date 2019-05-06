@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './styles.module.css'
 import Service from './service'
 import IconBtn from './components/IconBtn'
+import { Link } from 'react-router-dom'
 import {
   FaBookOpen as Book,
   FaEdit as Edit,
@@ -32,7 +33,7 @@ const Nav = props => {
 
   return (
     <nav className={styles.Nav}  style={{height: checked ? '18rem' : '5rem'}}>
-      <div className={styles.logo}>Bedtime</div>
+      <Link to='/' className={styles.logo}>Bedtime</Link>
       <div className={styles.toogleBtn}>
         <input type='checkbox' value={checked} onChange={() => setChecked(!checked)}/>
         <List/>

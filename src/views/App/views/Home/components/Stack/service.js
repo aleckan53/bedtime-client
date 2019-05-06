@@ -23,6 +23,14 @@ export default {
         ? n.classList = ('card third')
         : n.classList = ('card left')
     ))
+
+    const dots = document.getElementById(id + '-dots')
+    const totalDots = dots.childElementCount
+    const childrenDots = dots.querySelectorAll('span')
+    const focusedDotIdx = [...childrenDots].findIndex(n => n.classList.contains('on'))
+    childrenDots[focusedDotIdx].classList.remove('on')
+    const idToOn = (focusedDotIdx === totalDots-1) ? 0 : focusedDotIdx + 1
+    childrenDots[idToOn].classList.add('on')
   },
   handlePrev(id) {
     const stack = document.getElementById(id)
@@ -46,8 +54,16 @@ export default {
         ? n.classList = ('card third')
         : n.classList = ('card left')
     ))
+    const dots = document.getElementById(id + '-dots')
+    const totalDots = dots.childElementCount
+    const childrenDots = dots.querySelectorAll('span')
+    const focusedDotIdx = [...childrenDots].findIndex(n => n.classList.contains('on'))
+    childrenDots[focusedDotIdx].classList.remove('on')
+    const idToOn = (!focusedDotIdx) ? totalDots - 1 : focusedDotIdx - 1
+    childrenDots[idToOn].classList.add('on')
   },
   mapStories(stories, Component) {
+
     return stories.map((story, idx) => (
       !idx 
         ? <Component key={idx} className='focus' {...story}/> 

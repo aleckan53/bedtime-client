@@ -58,6 +58,12 @@
   border-radius: 10px;
   font-size: .9rem;
   font-weight: 600;
+  color: var(--main-text);
+  background: var(--btn-bg);
+}
+
+.unauth a:nth-child(1) {
+  background: var(--main-color-1)
 }
 
 .unauth h1 {

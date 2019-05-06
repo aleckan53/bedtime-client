@@ -13,7 +13,9 @@
   flex-direction: row-reverse;
   align-items: center;
   font-weight: 600;
-  color: var(--main-text)
+  color: var(--main-text);
+  user-select: none;
+  text-decoration: none;
 }
 
 .toogleBtn {
@@ -23,7 +25,8 @@
   border: 1px solid var(--border-1);
   padding: .5rem;
   border-radius: 10px;
-  margin: 0 5% 5% auto;
+  margin-right: var(--padding);
+  margin-left: auto;
 }
 
 .toogleBtn input[type='checkbox']{
@@ -45,6 +48,7 @@
   font-size: 1.5rem;
   color: var(--nav-btn);
   transition: all 1s ease;
+  color: var(--main-text);
 }
 
 .dropDown {
@@ -63,7 +67,7 @@
 
 .Nav {
   height: 5rem;
-  padding-top: 5%;
+  padding-top: 1rem;
   transition: all 1s ease;
   overflow: hidden;
 }

@@ -20,7 +20,7 @@ const Stack = props => {
         <button onClick={() => Service.handlePrev(props.title)}>
           <Left/>
         </button>
-        <div className='dots'>
+        <div className='dots' id={props.title + '-dots'}>
           {Service.mapIndicators(props.data.length, props.title)}
         </div>
         <button onClick={() => Service.handleNext(props.title)}>

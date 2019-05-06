@@ -3,11 +3,13 @@
   overflow-x: hidden;
   perspective: 2px;
   width: 100%;
+  position: relative;
 }
 
 .header {
   position: relative;
   height: 80vh;
+  background: var(--bg-21);
 }
 
 .clouds {
@@ -18,10 +20,10 @@
   width: 100%;
   height: 200px;
   perspective: 1px;
-  z-index: -1;
-  transform: translateZ(-1px) scale(1.8);
+  z-index: 0;
+  transform: translateZ(1px) scale(1.8);
   left: -50%;
-  bottom: 8vh;
+  bottom: 10px;
   position: absolute;
 }
 .clouds:nth-child(2) {
@@ -71,7 +73,23 @@
 .main {
   position: relative;
   height: 1000px;
-  z-index: 5;
+  z-index: 19;
+  padding: var(--padding);
+  z-index: 10;
+  background: linear-gradient(var(--bg-21) 0%, 30%, var(--bg-2));
+  top:-10px;
+}
+
+.main::before {
+  background: url('./assets/logo.png');
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10%;
+  right: 0;
 }
 
 .logo {
@@ -83,4 +101,46 @@
   height: 200px;
   position: absolute;
   top: -10%;
+}
+
+.main h1 {
+  margin: 0;
+  padding-top: 1.1rem
+}
+
+.main h2 {
+  font-size: 1.2rem
+}
+
+.main section {
+  margin-top: 2rem;
+}
+
+.slides {
+  width: 100%;
+  height: 400px;
+  background: red;
+}
+
+.topBtn {
+  width: auto;
+  height: 42px;
+  display: block;
+  width: 42px;
+  margin-left: auto;
+  margin-right: var(--padding);
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 1rem;
+}
+
+.topBtn svg {
+  font-size: 1.5rem;
+  border: 1px solid var(--border-1);
+  padding: .5rem;
+  border-radius: 10px;
+  color: var(--nav-btn);
+  transition: all .6s ease;
+  color: var(--main-text);
 }

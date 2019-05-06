@@ -24,8 +24,8 @@ const Editor = props => {
           theme='snow'
           value={state}
           onChange={handleChange}/>
-      </section>
       <button className='submit' onClick={handleSubmit}>Submit</button>
+      </section>
     </>
   )
 }

@@ -9,6 +9,7 @@ body {
   position: relative;
   box-sizing: border-box;
   height: 100%;
+  background: linear-gradient(var(--bg-21), var(--bg-2));
 }
 
 code {
@@ -17,34 +18,30 @@ code {
 }
 
 :root {
-  background: var(--bg-1);
-  --main-color-1: #145374;
-  --main-color-2: #e2598b;
+  min-width: 300px;
+  background: var(--bg-2);
+  color: var(--main-text);
+  --main-color-1: #7f4782;
+  --main-color-2: #fdd043;
   --sub-color-1: #82acff;
-  --outline-color: #5588a3;
+  --outline-color: white;
   --bg-1: white;
   --bg-2: #2b2726;
+  --bg-21: #422444;
   --heading-color: white;
   --menu-btn: black;
   --padding-side: 0 5%;
   --btn-1: #5061e7;
   --padding: 5%;
-  --border-1: rgba(0,0,0,.3);
-  --border-2: rgba(0,0,0,.1);
+  --border-1: rgba(255,255,255,.3);
+  --border-2: rgba(255,255,255,.1);
   --opacity-bw: rgba(0,0,0,0.3);
-  --main-text: black;
-  --nav-btn: rgba(0,0,0,0.8);
+  --main-text: white;
+  --nav-btn: rgba(255,255,255,0.8);
   --box-shadow: rgba(0,0,0,.4);
+  --btn-bg: rgba(0,0,0,.1);
   height: 100vh;
 } 
-
-section {
-  padding: var(--padding-side);
-}
-
-main {
-  height: 100%;
-}
 
 button, a, svg, input[type='checkbox'] {
   cursor: pointer;
@@ -52,9 +49,42 @@ button, a, svg, input[type='checkbox'] {
 
 input:focus {
   outline: none;
-  box-shadow: 0 0 15px -5px blue;
+  box-shadow: 0 0 15px -5px var(--outline-color);
 }
 
 .App {
   height: 100%;
+}
+
+h1,h2,h3,h4, p {
+  user-select: none;
+}
+
+main {
+  height: 100%;
+  padding: 0 var(--padding);
+}
+
+@media (min-width: 500px) {
+  :root {
+    --padding: 10%;
+  }
+}
+
+@media (min-width: 630px) {
+  :root {
+    --padding: 15%;
+  }
+}
+
+@media (min-width: 750px) {
+  :root {
+    --padding: 20%;
+  }
+}
+
+@media(min-width: 850px) {
+  :root {
+    --padding: 25%
+  }
 }
