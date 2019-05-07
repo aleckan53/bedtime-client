@@ -44,23 +44,21 @@
     height: 75vw;
   }
 }
+
 @media (min-width: 850px) {
-  .stack {
-    height: 65vw;
-    grid-template-rows: 60px 75% 30px;
-  }
-  .card {
-    height: 65%;
-  }
-}
-@media (min-width: 1100px) {
   .stack {
     height: 50vw;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .stack {
     height: 40vw;
+  }
+}
+@media (min-width: 1430px) {
+  .stack {
+    margin-top: 15%;
+    height: 30vw;
   }
 }
 .card a {

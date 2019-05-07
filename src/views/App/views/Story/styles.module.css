@@ -84,6 +84,17 @@
   position: relative;
 }
 
+@media(min-width: 850px) {
+  .unauth {
+    margin: 0 10%;
+  }
+}
+@media(min-width: 1150px) {
+  .unauth {
+    margin: 0 15%;
+  }
+}
+
 .imgWrapper h2 {
   position: absolute;
   bottom: 50px;

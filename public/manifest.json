@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bedtime App",
+  "name": "Kids bedtime stories platform",
   "icons": [
     {
       "src": "favicon.ico",

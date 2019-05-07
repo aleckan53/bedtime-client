@@ -47,7 +47,6 @@
 }
 
 .Auth button {
-  width: 100%;
   border: 1px solid var(--border-1);
   border-radius: 10px;
   height: 1.9rem;
@@ -58,6 +57,8 @@
   box-shadow: 3px 5px 10px -5px var(--box-shadow);
   color: white;
   background: var(--btn-bg);
+  display: block;
+  width: 100%;
 }
 
 .Auth button[type='submit'] {
@@ -87,38 +88,25 @@
 .btnWrapper {
   padding: 0 var(--padding-2);
   padding-top: 0;
+  box-sizing: border-box;
 }
 .btnWrapper {
   margin: 0 1rem;
 }
-
-@media (min-width: 1250px) {
+@media (min-width: 850px) {
   .Auth form {
     margin: 0 10%;
   }
   .btnWrapper {
-    margin: 0 9%;
+    margin: 0 10.5%;
   }
-}
-
-.animate-enter {
-  opacity: 0;
-  transform: scale(0.9);
 
 }
-.animate-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-
-}
-.animate-exit {
-  opacity: 1;
-
-}
-.animate-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
-
+@media (min-width: 1150px) {
+  .Auth form {
+    margin: 0 20%;
+  }
+  .btnWrapper {
+    margin: 0 15.5%;
+  }
 }
