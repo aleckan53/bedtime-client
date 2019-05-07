@@ -1,18 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'index.css'
-import App from './views/App'
+import App from 'views/App/App'
 import * as serviceWorker from './serviceWorker'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import LandingPage from 'views/LandingPage'
+import { BrowserRouter as Router, HashRouter } from 'react-router-dom'
 import { ThemeProvider } from './context/Theme'
 
 ReactDOM.render(
     <ThemeProvider>
-      <Router>
-        <Route path='/app' component={App}/>
-        <Route exact path='/' component={LandingPage}/>
-      </Router>
+      <HashRouter>
+        <App/>
+      </HashRouter>
     </ThemeProvider>,
   document.getElementById('root'))
 

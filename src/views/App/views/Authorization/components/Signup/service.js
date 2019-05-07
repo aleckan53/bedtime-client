@@ -1,7 +1,7 @@
 export default {
   validate: {
     user_name (user_name) {
-      const regex = /^(?=.{4,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/
+      const regex = /^[a-zA-Z0-9]{4,20}$/
       return regex.test(user_name)
     },
     password (password) {

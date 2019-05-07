@@ -4,9 +4,6 @@
   position: relative;
   color: var(--main-text);
   margin-top: 1rem;
-  display: grid;
-  grid-template-areas: 'title' 'card' 'controls';
-  grid-template-rows: 30px 90% 30px;
 }
 
 .stack h1 {
@@ -19,7 +16,6 @@
 }
 
 .card {
-  grid-area: 'card';
   border-radius: 15px;
   position: absolute;
   height: 80%;
@@ -133,11 +129,11 @@
 }
 
 .controls {
-  grid-area: 'controls';
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
   align-items: center;
+  justify-items: center;
 }
 
 .controls button {
@@ -146,6 +142,8 @@
   font-size: 1rem;
   background: none;
   color: var(--border-1);
+  width: 1rem;
+  height: 1rem;
 }
 
 .controls button:focus {
@@ -158,7 +156,7 @@
 }
 
 .stack h1 {
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 .dot {
@@ -168,7 +166,7 @@
   display: inline-block;
   content: '';
   border-radius: 50%;
-  margin: 0 .5rem;
+  margin: 0 .3rem 2px;
   transition: all .6s ease;
 }
 
@@ -176,6 +174,10 @@
   background: var(--main-color-1);
 }
 
-.dots {
-  margin-bottom: 7px;
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
 import { Link } from 'react-router-dom'
-import { IoIosLogIn as Login } from 'react-icons/io'
 import config from 'config'
 
 const LandingPage = () => {
@@ -19,16 +18,16 @@ const LandingPage = () => {
       </header>
       <main className={styles.main}>
         <h1>Bedtime</h1>
-        <section>
+        <section className={styles.description}>
           <h2>The best collection of kids stories.</h2>
           <div className={styles.mockup1}></div>
         </section>
-        <section>
+        <section className={styles.description}>
           <h2>Become an author</h2>
           <p>With Bedtime you can make up your own stories and share them with others.</p>
           <div className={styles.mockup3}></div>
         </section>
-        <section>
+        <section className={styles.description}>
         <h2>Upcoming features</h2><span className={styles.soon}>Coming soon *</span>
           <ul>
             <li>

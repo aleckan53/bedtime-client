@@ -4,9 +4,6 @@ import styles from './styles.module.css'
 import config from 'config'
 import { Link } from 'react-router-dom'
 import { 
-  IoIosVolumeHigh as Voice,
-  IoMdSunny as Light,
-  IoIosMoon as Dark,
   IoIosArrowUp as Up
 } from 'react-icons/io'
 
