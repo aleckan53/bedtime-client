@@ -1,69 +1,59 @@
 import React, { useState } from 'react'
-import Api from './api'
 import ReactQuill from 'react-quill'
-import 'react-quill/dist/quill.snow.css'
-import './styles.css'
-import config from 'config'
+import 'react-quill/dist/quill.bubble.css'
 
 const Editor = props => {
 
   const [state, setState] = useState({
-    story: '',
+    html: '',
     error: null,
   })
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
 
-  const handleChange = (story) => {
-    setState({
-      ...state,
-      story,
-    })
-  } 
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
-    Api.uploadStory(state.story)
-      .then(res => {
-        setMessage(res.message)
-        setState({
-          story: '',
-          error: null,
-        })
-        setLoading(false)
-        setTimeout(() => {
-          setMessage('')
-        }, 4e3)
-      })
-      .catch(error => {
-        setState({
-          ...state,
-          error
-        })
-      })
+  const handleChange = html => {
+    setState({ ...state, html })
   }
-  const userAuthorized = !!window.sessionStorage.getItem(config.TOKEN_NAME)
 
-  const btnDisabled = userAuthorized && state.story.length > 800
   return (
-    <>
-      <section className='editor'>
-        {!loading ? '' : <p className='msg'>Processing...</p>}
-        <div className='msg'>{message}</div>
-        <ReactQuill 
-          theme='snow'
-          value={state.story}
-          onChange={handleChange}/>
-      <button 
-        className='submit' 
-        onClick={handleSubmit} 
-        disabled={!btnDisabled}>
-        {userAuthorized ? 'Submit' : 'Please login'}
-      </button>
-      </section>
-    </>
+    <section className='Editor'>
+      <ReactQuill
+        theme='bubble'
+        onChange={handleChange}
+        value={state.html}
+        bounds='.editor'
+        style={{
+          border: '1px solid white',
+          color: 'white',
+          cursor: 'text'
+        }}
+        // modules={modules}
+        // formats={formats}
+        // placeholder='Hello'
+        />
+    </section>
   )
 }
 
 export default Editor
+
+
+const modules = {
+  toolbar: [
+    [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+    [{size: []}],
+    ['bold', 'italic', 'underline'],
+    [{'list': 'ordered'}, {'list': 'bullet'}, 
+     {'indent': '-1'}, {'indent': '+1'}],
+    ['image'],
+    
+  ],
+  clipboard: {
+    matchVisual: false,
+  },
+}
+
+const formats = [
+  'header', 'font', 'size',
+  'bold', 'italic', 
+  'list', 'bullet', 'indent',
+  'image'
+]
