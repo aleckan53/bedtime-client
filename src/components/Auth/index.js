@@ -90,7 +90,7 @@ const Authorization = props => {
         {fieldset}
       </form>
       <div className={styles.btnWrapper}>
-        <button type='button' onClick={handleFormSwitch}>{btnTitle}</button>
+        <button id='switch' type='button' onClick={handleFormSwitch}>{btnTitle}</button>
         <button type='button' onClick={handleGuestLogin}>Continue as a guest</button>
       </div>
     </section>

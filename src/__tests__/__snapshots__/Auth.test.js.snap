@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth Component matches the snapshot 1`] = `
+<section
+  className="Auth"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <Login
+      setState={[Function]}
+      state={
+        Object {
+          "error": null,
+          "formValid": false,
+          "values": Object {},
+        }
+      }
+    />
+  </form>
+  <div
+    className="btnWrapper"
+  >
+    <button
+      id="switch"
+      onClick={[Function]}
+      type="button"
+    >
+      Signup
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Continue as a guest
+    </button>
+  </div>
+</section>
+`;
+
+exports[`Auth Component siwtches form to Signup 1`] = `
+<section
+  className="Auth"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <Login
+      setState={[Function]}
+      state={
+        Object {
+          "error": null,
+          "formValid": false,
+          "values": Object {},
+        }
+      }
+    />
+  </form>
+  <div
+    className="btnWrapper"
+  >
+    <button
+      id="switch"
+      onClick={[Function]}
+      type="button"
+    >
+      Signup
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Continue as a guest
+    </button>
+  </div>
+</section>
+`;
+
+exports[`Auth Component siwtches form to Signup 2`] = `
+<section
+  className="Auth"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <Signup
+      setState={[Function]}
+      state={
+        Object {
+          "error": null,
+          "formValid": false,
+          "values": Object {},
+        }
+      }
+    />
+  </form>
+  <div
+    className="btnWrapper"
+  >
+    <button
+      id="switch"
+      onClick={[Function]}
+      type="button"
+    >
+      Login
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Continue as a guest
+    </button>
+  </div>
+</section>
+`;

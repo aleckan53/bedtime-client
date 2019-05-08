@@ -3,7 +3,6 @@ import Stack from './components/Stack'
 import './index.css'
 
 const Home = props => {
-
   const topRated = props.stories.filter(s => s.rating > 4) || []
   const newRelease = props.stories.filter(s => s.rating < 4) || []
   

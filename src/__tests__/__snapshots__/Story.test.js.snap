@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Component Authorized matches the snapshot 1`] = `
+<section
+  className="Story"
+>
+  <button
+    className="up"
+    onClick={[Function]}
+  >
+    <IoIosArrowUp />
+  </button>
+  <div
+    className="top"
+  >
+    <p>
+      0
+       min read time
+    </p>
+    <h3>
+      Author: 
+    </h3>
+  </div>
+  <h1 />
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</section>
+`;
+
+exports[`Story Component Unauthorized matches the snapshot 1`] = `
+<section
+  className="unauth"
+>
+  <h1>
+    Please login or signup to read the story
+  </h1>
+  <div
+    className="imgWrapper"
+  >
+    <img
+      alt="test"
+    />
+    <h2>
+      test
+    </h2>
+  </div>
+  <div>
+    <Link
+      to="/app/auth"
+    >
+      Login / Signup
+    </Link>
+    <Link
+      to="/app/home"
+    >
+      Back to home page
+    </Link>
+  </div>
+</section>
+`;

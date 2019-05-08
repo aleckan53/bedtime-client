@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component renders all routes 1`] = `
+<div
+  className="App"
+>
+  <Route
+    component={[Function]}
+    path="/app"
+  />
+  <main>
+    <Switch>
+      <Route
+        component={[Function]}
+        path="/app/story/:id"
+        stories={Array []}
+      />
+      <Route
+        component={[Function]}
+        path="/app/auth"
+      />
+      <Route
+        component={[Function]}
+        path="/app/editor"
+      />
+      <Route
+        component={[Function]}
+        path="/app"
+        stories={Array []}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </main>
+</div>
+`;

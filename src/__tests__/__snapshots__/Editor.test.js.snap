@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Editor Component matches snapshot 1`] = `
+<section
+  className="editor"
+>
+  <div
+    className="msg"
+  />
+  <Quill
+    bounds=".editor"
+    formats={
+      Array [
+        "header",
+        "font",
+        "size",
+        "bold",
+        "italic",
+        "list",
+        "bullet",
+        "indent",
+        "image",
+      ]
+    }
+    modules={
+      Object {
+        "clipboard": Object {
+          "matchVisual": false,
+        },
+        "toolbar": Array [
+          Array [
+            Object {
+              "header": "1",
+            },
+            Object {
+              "header": "2",
+            },
+            Object {
+              "font": Array [],
+            },
+          ],
+          Array [
+            Object {
+              "size": Array [],
+            },
+          ],
+          Array [
+            "bold",
+            "italic",
+            "underline",
+          ],
+          Array [
+            Object {
+              "list": "ordered",
+            },
+            Object {
+              "list": "bullet",
+            },
+            Object {
+              "indent": "-1",
+            },
+            Object {
+              "indent": "+1",
+            },
+          ],
+          Array [
+            "image",
+          ],
+        ],
+      }
+    }
+    onChange={[Function]}
+    placeholder="Please use H1 for story's title
+
+Supported images types: .png, .jpeg. Others will be ignored
+
+Story has to be at least of 800 characters long ~ 1 min read
+"
+    theme="snow"
+    value=""
+  />
+  <button
+    className="submit"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Please login
+  </button>
+</section>
+`;

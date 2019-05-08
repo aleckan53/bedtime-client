@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component matches the snapshot 1`] = `
+<section
+  className="Home"
+>
+  <Stack
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "name": "test",
+          "rating": 5,
+        },
+      ]
+    }
+    rating={4}
+    title="Top Rated"
+  />
+  <Stack
+    data={
+      Array [
+        Object {
+          "id": 12,
+          "name": "test2",
+          "rating": 3,
+        },
+      ]
+    }
+    rating={0}
+    title="New release"
+  />
+</section>
+`;
