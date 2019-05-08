@@ -68,7 +68,7 @@ const Editor = props => {
 export default Editor
 
 const placeholder = `Please use H1 for story's title\n
-Supported images types: *.png, *.jpeg. Others will be ignored\n
+Supported images types: .png, .jpeg. Others will be ignored\n
 Story has to be at least of 800 characters long ~ 1 min read
 `
 

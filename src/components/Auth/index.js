@@ -29,15 +29,18 @@ const Authorization = props => {
         })
     } else {
       Api.signup(state.values)
-        .then(({user_name}) => {
-          switchForm(true)
-          setState({
-            formValid: false,
-            error: null,
-            values: {
-              user_name
-            }
-          })
+        .then(() => {
+          Api.login(state.values)
+            .then(({authToken}) => {
+              Service.saveToken(authToken)
+              props.history.push('/app')
+            })
+            .catch(err => {
+              setState({
+                ...state,
+                error: err.message
+              })
+            })  
         })
         .catch(err => {
           setState({

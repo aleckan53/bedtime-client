@@ -47,8 +47,8 @@ const Story = props => {
     <section className={styles.Story}>
       <button className={styles.up} onClick={() => {
           window.scrollTo({
-            top: 100,
-            left: 100,
+            top: 0,
+            left: 0,
             behavior: 'smooth'
           })
         }}>
