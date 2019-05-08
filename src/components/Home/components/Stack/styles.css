@@ -1,0 +1,181 @@
+.stack {
+  height: 120vw;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--main-text);
+  margin-top: 1rem;
+}
+
+.stack h1 {
+  margin-top: 0;
+  grid-area: 'title';
+}
+
+.deck {
+  list-style: none;
+}
+
+.card {
+  border-radius: 15px;
+  position: absolute;
+  height: 80%;
+  width: 75%;
+  z-index: 0;
+  transition: all .6s ease;
+  box-shadow: 10px 10px 10px -10px black;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 500px) {
+  .stack {
+    height: 95vw;
+  }
+}
+@media (min-width: 630px) {
+  .stack {
+    height: 85vw;
+  }
+}
+@media (min-width: 750px) {
+  .stack {
+    height: 75vw;
+  }
+}
+
+@media (min-width: 850px) {
+  .stack {
+    height: 50vw;
+  }
+}
+@media (min-width: 1150px) {
+  .stack {
+    height: 40vw;
+  }
+}
+@media (min-width: 1430px) {
+  .stack {
+    margin-top: 15%;
+    height: 30vw;
+  }
+}
+.card a {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  text-decoration: none;
+  background: var(--main-color-1);
+  color: white;
+  width: 5rem;
+  height: 22px;
+  border-radius: 15px;
+  display: grid;
+  place-content: center;
+  box-shadow: 3px 3px 5px -1px black;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: .9rem;
+}
+
+.card a:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 50px;
+  left: 5%;
+  right: 5%;
+  text-shadow: 5px 3px 6px black;
+  font-size: 22px;
+  box-sizing: border-box;
+  font-weight: 400
+}
+
+.focus {
+  z-index: 300;
+  left: 0;
+  transform: scale(1,1);
+  transition: opacity .5s, left .6s ease, transform .6s ease, z-index .5s;
+}
+
+.second {
+  left: 15%;
+  z-index: 200;
+  transform: scale(.9,.9);
+}
+
+.third {
+  left: 30%;
+  z-index: 100;
+  transform: scale(.8,.8);
+  transition: z-index .6s ease, opacity 2s ease, transform .6s ease, left .6s ease;
+}
+.left {
+  left: -100%;
+  z-index: 100;
+  opacity: 0;
+  transform: scale(1.2,1.2);
+  transition: z-index 1s ease, opacity .3s ease, transform 1s ease, left .6s ease;
+}
+
+.left a {
+  visibility: hidden;
+}
+
+.controls {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
+  justify-items: center;
+}
+
+.controls button {
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+  background: none;
+  color: var(--border-1);
+  width: 1rem;
+  height: 1rem;
+}
+
+.controls button:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+}
+
+.card h2 {
+  color: white;
+}
+
+.stack h1 {
+  margin: 0;
+}
+
+.dot {
+  background: var(--border-1);
+  width: .5rem;
+  height: .5rem;
+  display: inline-block;
+  content: '';
+  border-radius: 50%;
+  margin: 0 .3rem 2px;
+  transition: all .6s ease;
+}
+
+.on {
+  background: var(--main-color-1);
+}
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}

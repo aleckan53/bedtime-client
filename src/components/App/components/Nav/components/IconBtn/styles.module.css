@@ -1,0 +1,42 @@
+.IconBtn li {
+  width: 7rem;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  color: var(--main-text)
+}
+
+.IconBtn span {
+  justify-self: flex-start;
+ }
+ 
+ .IconBtn svg {
+   font-size: 1.5rem;
+   margin-left: 1rem;
+   border: 1px solid var(--border-1);
+   padding: .5rem;
+   border-radius: 10px;
+   color: var(--nav-btn);
+   transition: all .6s ease;
+   color: var(--main-text);
+ }
+ 
+ .IconBtn {
+   text-decoration: none;
+   color: black;
+   box-sizing: border-box;
+ }
+
+ .IconBtn:hover svg {
+   color: var(--main-color-2)
+ }
+
+ .IconBtn:focus svg {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--main-color-2);
+ }
