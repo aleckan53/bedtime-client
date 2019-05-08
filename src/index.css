@@ -11,7 +11,6 @@ body {
   height: 100%;
   background: linear-gradient(var(--bg-21), var(--bg-2));
   -webkit-overflow-scrolling: touch;
-
 }
 
 code {
@@ -52,10 +51,6 @@ button, a, svg, input[type='checkbox'] {
 
 .App {
   height: 100%;
-}
-
-h1,h2,h3,h4, p {
-  user-select: none;
 }
 
 main {
