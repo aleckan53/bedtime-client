@@ -15,6 +15,7 @@ const Stack = props => {
     <Swipe
       onSwipeRight={() => Service.handlePrev(props.title)}
       onSwipeLeft={() => Service.handleNext(props.title)}
+      tolerance={100}
     >
       <div className='stack'>
       <div className='top'>
