@@ -22,13 +22,13 @@ code {
   min-width: 300px;
   background: var(--bg-2);
   color: var(--main-text);
-  --main-color-1: #7f4782;
+  --main-color-1: #474882;
   --main-color-2: #fdd043;
   --sub-color-1: #82acff;
   --outline-color: white;
   --bg-1: white;
   --bg-2: #2b2726;
-  --bg-21: #422444;
+  --bg-21: #252444;
   --heading-color: white;
   --menu-btn: black;
   --padding-side: 0 5%;
